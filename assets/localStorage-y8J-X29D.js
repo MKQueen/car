@@ -1,0 +1,1 @@
+const o=(t,r)=>{typeof r=="object"&&(r=JSON.stringify(r));try{return localStorage.setItem(t,r),!0}catch(e){return console.error("设置localStorage失败:",e),!1}},a=t=>{const r=localStorage.getItem(t);try{return r&&typeof r=="string"&&r.startsWith("{")&&r.endsWith("}")?JSON.parse(r):r}catch(e){return console.error("获取localStorage失败:",e),null}};export{a as g,o as s};
